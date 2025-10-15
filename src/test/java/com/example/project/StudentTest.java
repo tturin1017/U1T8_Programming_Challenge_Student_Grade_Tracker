@@ -23,6 +23,14 @@ public class StudentTest {
     }
 
     @Test
+    //edge case no-score
+    public void testInitialTestScoreCountAndHighest(){
+        Student s = new Student("John", "Doe", 2025);
+        assertEquals(0,s.getTestScoreCount());
+        assertEquals(0.0,s.getHighestTestScore());
+    }
+
+    @Test
     void testGetHighestTestScore(){
         Student s = new Student("John", "Doe", 2025);
         double expectedOutput = 0.0;
@@ -74,11 +82,17 @@ public class StudentTest {
         assertEquals(expectedOutput,studentOutput);
     }
 
-
-
-
-
-
+    @Test
+    public void testMultipleStudentsAreIndependent(){
+        Student s1 = new Student("Dan", "Wong", 2027);
+        Student s2 = new Student("Eve", "Kim", 2027);
+        s1.addTestScore(90.0);
+        s2.addTestScore(75.0);
+        assertEquals(1, s1.getTestScoreCount());
+        assertEquals(1, s2.getTestScoreCount());
+        assertEquals(90.0, s1.getHighestTestScore());
+        assertEquals(75.0, s2.getHighestTestScore());
+    }
 
   
     

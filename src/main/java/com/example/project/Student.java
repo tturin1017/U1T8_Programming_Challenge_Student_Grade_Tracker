@@ -1,7 +1,7 @@
 package com.example.project;
 
 public class Student {
-    // instance variables for 
+    // INSTANCE VARIABLES (private)
     // first name (String)
     // last name (String)
     // graduation year (int)
@@ -29,7 +29,7 @@ public class Student {
  
     public double getHighestTestScore() {
         //implement code here!
-        return 0.0;
+        return 50.0; //random double number
     }
 
     public int getTestScoreCount(){
@@ -65,7 +65,7 @@ public class Student {
     // quotient of accumulatedTestScores and testScoreCount
     public double averageTestScore() {
         //implement code here!
-        return 0.0;
+        return 50.0; //random double number
     }
  
     // this method prints all info of a Student object to the console 
